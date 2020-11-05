@@ -19,4 +19,4 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::resource('categories', 'CategoryController');
+Route::resource('category', 'CategoryController');
