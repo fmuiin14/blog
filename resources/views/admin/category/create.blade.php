@@ -6,6 +6,13 @@ Tambah Kategori
 
 @section('content')
 
+@if (count($errors)>0)
+@foreach ($errors as $error)
+{{$error}}
+@endforeach
+@endif
+
+
 <form action="{{ route('category.store') }}" method="POST">
     @csrf
     <div class="form-group">
