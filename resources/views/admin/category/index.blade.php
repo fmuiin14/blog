@@ -6,6 +6,12 @@ Kategori
 
 @section('content')
 
+@if (Session::has('success'))
+<div class="alert alert-primary" role="alert">
+    {{Session('success')}}
+</div>
+@endif
+
 <a href="{{route('category.create')}}" class="btn btn-info btn-sm mb-3">Tambah Kategori</a>
 
 <table class="table table-striped table-hover table-sm table-bordered">
@@ -29,8 +35,8 @@ Kategori
             <td>{{$category + $categories->firstitem()}}</td>
             <td>{{$hasil->name}}</td>
             <td>
-                <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                <a href="{{route('category.edit', $hasil->id)}}" class="btn btn-primary btn-sm">Edit</a>
+                <a href="{{ route('category.destroy', $hasil->id) }}" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
         @endforeach
