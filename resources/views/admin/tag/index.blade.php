@@ -1,7 +1,7 @@
 @extends('template_backend.home');
 
 @section('judul')
-Kategori
+Tag
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@ Kategori
 </div>
 @endif
 
-<a href="{{route('category.create')}}" class="btn btn-info btn-sm mb-3">Tambah Kategori</a>
+<a href="{{route('tag.create')}}" class="btn btn-info btn-sm mb-3">Tambah Kategori</a>
 
 <table class="table table-striped table-hover table-sm table-bordered">
     <thead>
@@ -26,7 +26,7 @@ Kategori
             </th>
 
             <th>
-                Nama Kategori
+                Nama Tag
             </th>
             <th>
                 Action
@@ -34,18 +34,18 @@ Kategori
         </tr>
     </thead>
     <tbody>
-        @if(count($categories) >= 1)
-        @foreach ($categories as $category => $hasil)
+        @if (count($tags) >= 1)
+        @foreach ($tags as $tag => $hasil)
         <tr>
-            <td>{{$category + $categories->firstitem()}}</td>
+            <td>{{$tag + $tags->firstitem()}}</td>
             <td>{{$hasil->name}}</td>
             <td>
 
-                <form action="{{ route('category.destroy', $hasil->id) }}" method="POST">
+                <form action="{{ route('tag.destroy', $hasil->id) }}" method="POST">
                     @csrf
                     @method('delete')
-                    <a href="{{route('category.edit', $hasil->id)}}" class="btn btn-primary btn-sm">Edit</a>
-                    <button type="submit" href="{{ route('category.destroy', $hasil->id) }}"
+                    <a href="{{route('tag.edit', $hasil->id)}}" class="btn btn-primary btn-sm">Edit</a>
+                    <button type="submit" href="{{ route('tag.destroy', $hasil->id) }}"
                         class="btn btn-danger btn-sm">Delete</button>
                 </form>
             </td>
@@ -53,12 +53,12 @@ Kategori
         @endforeach
         @else
         <tr>
-            <td class="text-center" colspan="3">tidak ada data</td>
+            <td class="text-center" colspan="3">Tidak ada data</td>
         </tr>
         @endif
     </tbody>
 </table>
 
-{{$categories->links()}}
+{{$tags->links()}}
 
 @endsection
