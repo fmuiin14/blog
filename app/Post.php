@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $fillable = ['judul','category_id','content','gambar','slug'];
+
     public function category() {
         return $this->BelongsTo('App\Category');
     }
 
-    protected $fillable = ['judul','category_id','content','gambar','slug'];
+    public function tags(){
+        return $this->belongsToMany('App\Tag');
+    }
+
 }
