@@ -19,6 +19,7 @@
                     <span>Post</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{ route('post.index') }}">List Post</a></li>
+                    <li><a class="nav-link" href="{{ route('post.tampil_hapus') }}">Trashed</a></li>
                 </ul>
             </li>
             <li class="dropdown">
