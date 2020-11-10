@@ -32,10 +32,10 @@ Post
                 Kategori
             </th>
             <th>
-                Tag
+                Daftar Tags
             </th>
             <th>
-                Gambar
+                Thumbnail
             </th>
             <th>
                 Action
