@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create');
     }
 
     /**
@@ -36,7 +36,26 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|min:3|max:30',
+            'email' => 'required|email:rfc,dns',
+            'tipe' => 'required'
+        ]);
+
+        if ($request->input('passworrd')) {
+            $password = bcrypt($request->password);
+        } else {
+            $password = bcrypt('1234');
+        }
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'tipe' => $request->tipe,
+            'password' => $password
+        ]);
+
+        return redirect()->back()->with('success', 'User Berhasil Di Simpan');
     }
 
     /**
@@ -58,7 +77,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::findOrFail($id);
+        return view('admin.user.edit', compact('users'));
     }
 
     /**
@@ -70,7 +90,29 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|min:3|max:30',
+            'tipe' => 'required'
+        ]);
+
+        if ($request->input('password')) {
+
+            $user_data = [
+                'name' => $request->name,
+                'tipe' => $request->tipe,
+                'password' => bcrypt($request->password)
+            ];
+        } else {
+            $user_data = [
+                'name' => $request->name,
+                'tipe' => $request->tipe
+            ];
+        }
+
+        $users = User::find($id);
+        $users->update($user_data);
+
+        return redirect()->route('user.index')->with('success', 'Data Berhasil Di Update');
     }
 
     /**
@@ -81,6 +123,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $users = User::findOrFail($id);
+        $users->delete();
+
+        return redirect()->back()->with('hapus', 'Data berhasil dihapus');
     }
 }

@@ -1,7 +1,7 @@
 @extends('template_backend.home');
 
 @section('judul')
-Tambah Kategori
+Tambah User
 @endsection
 
 @section('content')
@@ -21,15 +21,33 @@ Tambah Kategori
 @endif
 
 
-<form action="{{ route('category.store') }}" method="POST">
+<form action="{{ route('user.store') }}" method="POST">
     @csrf
     <div class="form-group">
-        <label>Kategori</label>
+        <label>Nama User</label>
         <input type="text" class="form-control" name="name">
     </div>
 
     <div class="form-group">
-        <button class="btn btn-primary btn-block">Simpan Kategori</button>
+        <label>Email</label>
+        <input type="email" class="form-control" name="email">
+    </div>
+
+    <div class="form-group">
+        <label>Tipe User</label>
+        <select class="form-control" name="tipe">
+            <option value="" holder disabled>Pilih Tipe User</option>
+            <option value="1">Administrator</option>
+            <option value="0">Penulis</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-block">Simpan User</button>
     </div>
 
 </form>

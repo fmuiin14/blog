@@ -1,7 +1,7 @@
 @extends('template_backend.home');
 
 @section('judul')
-Edit Kategori
+Edit User
 @endsection
 
 @section('content')
@@ -21,16 +21,40 @@ Edit Kategori
 @endif
 
 
-<form action="{{ route('category.update', $category->id) }}" method="POST">
+<form action="{{ route('user.update', $users->id) }}" method="POST">
     @csrf
     @method('PUT')
     <div class="form-group">
-        <label>Kategori</label>
-        <input type="text" class="form-control" name="name" value="{{$category->name}}">
+        <label>Nama User</label>
+        <input type="text" class="form-control" name="name" value="{{$users->name}}">
     </div>
 
     <div class="form-group">
-        <button class="btn btn-primary btn-block">Edit Kategori</button>
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" value="{{$users->email}}" readonly>
+    </div>
+
+    <div class="form-group">
+        <label>Tipe User</label>
+        <select class="form-control" name="tipe">
+            <option value="" holder disabled>Pilih Tipe User</option>
+            <option value="1" @if($users->tipe == 1)
+                selected
+                @endif
+                >Administrator</option>
+            <option value="0" @if ($users->tipe == 0)
+                selected
+                @endif
+                >Penulis</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-block">Update User</button>
     </div>
 
 </form>
