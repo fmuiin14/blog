@@ -35,6 +35,9 @@ Post
                 Daftar Tags
             </th>
             <th>
+                Creator
+            </th>
+            <th>
                 Thumbnail
             </th>
             <th>
@@ -51,9 +54,10 @@ Post
             <td>{{$hasil->category->name}}</td>
             <td>@foreach ($hasil->tags as $tag)
                 <ul>
-                    <li>{{$tag->name}}</li>
+                    <h6><span class="badge badge-info">{{$tag->name}}</span></h6>
                 </ul>
                 @endforeach</td>
+            <td>{{$hasil->users->name}}</td>
             <td><img src="{{ asset($hasil->gambar) }}" class="img-fluid" width="100px"></td>
             <td>
 
