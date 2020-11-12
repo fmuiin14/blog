@@ -276,3 +276,9 @@ Fathul Muiin Personal Blog
 <!-- End List Posts
 	================================================== -->
 @endsection
+
+@section('kategori-explore')
+@foreach ($categories as $category)
+<a href="#" class="badge badge-pill badge-danger" style="font-size: 8pt;" aria-label="laravel">{{$category->name}}</a>
+@endforeach
+@endsection

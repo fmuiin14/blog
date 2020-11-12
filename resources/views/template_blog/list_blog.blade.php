@@ -17,33 +17,10 @@
 
     @include('template_blog.navbar')
     <div class="container">
-        {{-- <div class="row"> --}}
-        @include('template_blog.title')
-
         @yield('content')
 
-        <!-- JUMBO CATEGORIES CLOUD -->
-
-        <div class="jumbotron fortags mt-4" style="background-color: #335EF7">
-            <div class="row">
-                <div class="col-md-4 align-self-center text-center">
-                    <h2 class="hidden-sm-down text-white">Explore &rarr;</h2>
-                </div>
-
-
-                <div class="col-md-8 align-self-center text-center">
-                    @yield('kategori-explore')
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-
         @include('template_blog.footer')
-        {{-- </div> --}}
     </div>
-    <!-- /.container -->
 
     @include('template_blog.script')
 </body>

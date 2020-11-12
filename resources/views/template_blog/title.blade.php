@@ -1,7 +1,7 @@
     <!-- Begin Site Title
 ================================================== -->
     <div class="mainheading">
-        <h2 class="sitetitle">Blog Personal Untuk</h2>
+        <h2 class="sitetitle">Blog Personal Untuk <span id="placetextheader">...</span></h2>
         {{-- 
             Belajar, Berbagi, Berkembang, Bercerita 
             --}}

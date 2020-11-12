@@ -1,6 +1,6 @@
     <!-- Begin Nav
 ================================================== -->
-    <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-primary mediumnavigation">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -20,6 +20,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="post.html">Daftar Isi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('blog.list')}}">Semua Post</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="author.html">Author</a>
