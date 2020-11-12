@@ -25,7 +25,7 @@ Fathul Muiin Personal Blog
     <!-- Begin Post Content -->
     <div class="article-post">
         <p>
-            {{$post->content}}
+            {{!!$post->content!!}}
         </p>
     </div>
     <!-- End Post Content -->
