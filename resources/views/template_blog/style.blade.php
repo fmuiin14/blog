@@ -7,3 +7,4 @@
 <link href="{{asset('frontend/css/mediumish.css')}}" rel="stylesheet">
 {{-- custom by fmuiin14 --}}
 <link href="{{asset('frontend/css/custom-style.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

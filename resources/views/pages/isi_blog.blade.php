@@ -25,19 +25,19 @@ Fathul Muiin Personal Blog
     <!-- Begin Post Content -->
     <div class="article-post">
         <p>
-            {{!!$post->content!!}}
+            {{-- {{$post->content }} --}}
+            <?= $post->content; ?>
         </p>
     </div>
     <!-- End Post Content -->
 
     <!-- Begin Tags -->
     <div class="after-post-tags">
+        @foreach ($tags as $tag)
         <ul class="tags">
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Growth Mindset</a></li>
-            <li><a href="#">Productivity</a></li>
-            <li><a href="#">Personal Growth</a></li>
+            <li><a href="#">{{$tag->name}}</a></li>
         </ul>
+        @endforeach
     </div>
     <!-- End Tags -->
 

@@ -24,7 +24,7 @@
 
         <!-- JUMBO CATEGORIES CLOUD -->
 
-        <div class="jumbotron fortags mt-4" style="background-color: #335EF7">
+        <div class="jumbotron fortags mt-4" style="background-color: #143055 !important">
             <div class="row">
                 <div class="col-md-4 align-self-center text-center">
                     <h2 class="hidden-sm-down text-white">Explore &rarr;</h2>
