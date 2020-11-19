@@ -8,7 +8,7 @@
 
 
         <div class="col-md-8 align-self-center text-center">
-            @foreach ($category as $hasil)
+            @foreach ($category_widget as $hasil)
             <a href="#" class="badge badge-pill badge-danger" style="font-size: 8pt;"
                 aria-label="{{$hasil->name}}">{{$hasil->name}} ({{$hasil->posts->count()}})</a>
             @endforeach
