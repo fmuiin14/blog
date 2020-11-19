@@ -7,18 +7,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Category extends Model
 {
-    protected $fillable = ['name', 'slug'];
-
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
-
-    public function hitungjumlah()
-    {
-        return $this->hasMany('App\Post');
-    }
-    // Pada View:
-    // $post->hitungjumlah->count();
+    protected $fillable = ['name','slug']; 
 
 }

@@ -55,7 +55,6 @@ Fathul Muiin Personal Blog
                 </div>
             </div>
         </div>
-        @endforeach
         <!-- end post -->
     </div>
 
@@ -119,7 +118,8 @@ Fathul Muiin Personal Blog
 @endsection
 
 @section('kategori-explore')
-@foreach ($categories as $kate)
-<a href="#" class="badge badge-pill badge-danger" style="font-size: 8pt;" aria-label="laravel">{{$kate->name}}</a>
+{{-- @foreach ($categories as $kate) --}}
+<a href="#" class="badge badge-pill badge-danger" style="font-size: 8pt;" aria-label="laravel">{{$hasil->name}}</a>
+{{-- @endforeach --}}
 @endforeach
 @endsection

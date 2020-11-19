@@ -51,7 +51,7 @@ Tambah Post
 
     <div class="form-group">
         <label>Konten</label>
-        <textarea name="content" class="form-control" id="content"></textarea>
+        <textarea name="content" class="form-control"></textarea>
     </div>
 
     <div class="form-group">
@@ -64,8 +64,6 @@ Tambah Post
     </div>
 
 </form>
-
-
 
 
 

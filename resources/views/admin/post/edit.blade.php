@@ -62,7 +62,7 @@ Edit Post
 
     <div class="form-group">
         <label>Konten</label>
-        <textarea name="content" id="content" class="form-control">{{$posts->content}}</textarea>
+        <textarea name="content" class="form-control">{{$posts->content}}</textarea>
     </div>
 
     <div class="form-group">
@@ -75,5 +75,7 @@ Edit Post
     </div>
 
 </form>
+
+
 
 @endsection
