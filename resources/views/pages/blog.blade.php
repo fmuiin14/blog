@@ -53,9 +53,14 @@ Fathul Muiin Personal Blog
         </div>
         @endforeach
         <!-- end post -->
-
-
     </div>
+
+    <div class="row text-center mt-3">
+        <div class="col-md-12">
+            <a href="{{route('blog-list')}}" class="btn btn-outline-primary">Postingan Lainnya</a>
+        </div>
+    </div>
+
 </section>
 <!-- End List Posts
 	================================================== -->
@@ -108,21 +113,4 @@ Fathul Muiin Personal Blog
 <!-- End List Posts
 	================================================== -->
 
-<!-- JUMBO CATEGORIES CLOUD -->
-
-<div class="jumbotron fortags mt-4" style="background-color: #143055 !important">
-    <div class="row">
-        <div class="col-md-4 align-self-center text-center">
-            <h2 class="hidden-sm-down text-white">Explore &rarr;</h2>
-        </div>
-
-
-        <div class="col-md-8 align-self-center text-center">
-            <a href="#" class="badge badge-pill badge-danger" style="font-size: 8pt;" aria-label="laravel">Postingan
-                Lainnya</a>
-        </div>
-    </div>
-
-</div>
-<!-- /.container -->
 @endsection

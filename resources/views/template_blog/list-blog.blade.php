@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{{asset('mediumish')}}/img/favicon.ico">
-    <title>Fathul Muiin Blog</title>
+    <title>@yield('title')</title>
     @include('includes.style')
 </head>
 
@@ -15,16 +15,21 @@
 
     @include('includes.navbar')
 
-    @include('includes.title')
+    @include('includes.author')
+
+
 
     @yield('content')
 
-    @include('includes.widget')
+
 
     @include('includes.footer')
 
+
     </div>
-    <!-- /.container -->
+    </div>
+    <!-- End Author Posts
+================================================== -->
 
     @include('includes.script')
 </body>
