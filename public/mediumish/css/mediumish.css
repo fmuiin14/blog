@@ -11,7 +11,7 @@ body {
 	padding:1rem 0rem;
 }
 a {
-	color:#00ab6b;
+	color:#000;
 }
 a,a:hover {
 	transition:all 0.2s;
@@ -145,7 +145,7 @@ span.post-date,span.post-read {
 span.post-read-more {
 	align-items:center;
 	display:inline-block;
-	float:right;
+	/* float:right; */
 	margin-top:8px;
 }
 span.post-read-more a {
@@ -197,6 +197,7 @@ span.post-name a,span.post-read-more a:hover {
 .mediumnavigation .navbar-brand img {
 	max-height:30px;
 	margin-right:5px;
+	border-radius: 10px;
 }
 .mainheading h1.sitetitle {
 	font-family:Righteous;

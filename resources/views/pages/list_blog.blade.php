@@ -13,14 +13,14 @@ List Post
         <div class="listrecent listrelated">
 
             <!-- begin post -->
-            @foreach ($data as $list_post)
+            @forelse ($data as $list_post)
             <div class="authorpostbox">
                 <div class="card">
-                    <a href="#">
+                    <a href="{{route('blog-isi', $list_post->slug)}}">
                         <img class="img-fluid img-thumb" src="{{asset($list_post->gambar)}}" alt="">
                     </a>
                     <div class="card-block">
-                        <h2 class="card-title"><a href="#">{{$list_post->judul}}</a></h2>
+                    <h2 class="card-title"><a href="{{route('blog-isi', $list_post->slug)}}">{{$list_post->judul}}</a></h2>
                         <h4 class="card-text">
                             <?= substr($list_post->content, 0, 150); ?>...
                         </h4>
@@ -46,7 +46,13 @@ List Post
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+            <div class="card">
+                <div class="card-block">
+                    <h2 class="card-title text-center">data tidak ditemukan</h2>
+                </div>
+            </div>
+            @endforelse
             <!-- end post -->
         </div>
         {{-- <div class="col-md-12">
