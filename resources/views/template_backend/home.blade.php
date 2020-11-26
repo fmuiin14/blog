@@ -30,6 +30,8 @@
 
     </script>
     <!-- /END GA -->
+
+    <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
 </head>
 
 <body>

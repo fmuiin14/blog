@@ -5,4 +5,3 @@
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="{{asset('mediumish')}}/css/mediumish.css" rel="stylesheet">
-<link href="{{asset('frontend')}}/css/custom-style.css" rel="stylesheet">

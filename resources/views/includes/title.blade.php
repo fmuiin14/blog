@@ -1,11 +1,11 @@
 <!-- Begin Site Title
 ================================================== -->
 <div class="container">
-    <div class="mainheading">
-        <h2 class="sitetitle animate__animated animate__jello">Blog Personal Untuk <span id="placetextheader">...</span></h2>
-        <p class="lead">
-            fmuiin.com adalah situs blog personal yang berisi tentang pemikiran, pembelajaran pemrograman, dan lain-lain.
-        </p>
-    </div>
-    <!-- End Site Title
+	<div class="mainheading">
+		<h1 class="sitetitle">Mediumish</h1>
+		<p class="lead">
+			 Bootstrap theme, medium style, simply perfect for bloggers
+		</p>
+	</div>
+<!-- End Site Title
 ================================================== -->

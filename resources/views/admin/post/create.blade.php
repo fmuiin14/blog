@@ -51,7 +51,7 @@ Tambah Post
 
     <div class="form-group">
         <label>Konten</label>
-        <textarea name="content" class="form-control"></textarea>
+        <textarea id="my-editor" name="content" class="form-control"></textarea>
     </div>
 
     <div class="form-group">

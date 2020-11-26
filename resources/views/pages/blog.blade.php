@@ -11,7 +11,7 @@ Fathul Muiin Personal Blog
 	================================================== -->
 <section class="recent-posts">
     <div class="section-title">
-        <h2><span>Postingan Terbaru</span></h2>
+        <h2><span>All Stories</span></h2>
     </div>
     <div class="card-columns listrecent">
 
@@ -29,8 +29,8 @@ Fathul Muiin Personal Blog
                     <div class="wrapfooter">
                         <span class="meta-footer-thumb">
                             <a href="#"><img class="author-thumb"
-                                    src="https://secure.gravatar.com/avatar/0215dcc8ed42c9eb96e679a1b57d4126"
-                                    alt="Fathul Muiin"></a>
+                                    src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
+                                    alt="Sal"></a>
                         </span>
                         <span class="author-meta">
                             <span class="post-name"><a href="#">{{$post_terbaru->users->name}}</a></span><br />
@@ -57,7 +57,7 @@ Fathul Muiin Personal Blog
 
     <div class="row text-center mt-3">
         <div class="col-md-12">
-            <a href="{{route('blog-list')}}" class="btn btn-outline-dark">Postingan Lainnya</a>
+            <a href="{{route('blog-list')}}" class="btn btn-outline-primary">Postingan Lainnya</a>
         </div>
     </div>
 
